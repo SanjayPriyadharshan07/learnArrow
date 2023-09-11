@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Lesson</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: gray;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f4f4f4, #ddd);
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 10px auto; /* Center the container horizontally */
+        }
+
+        .logo-container {
+            text-align: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            font-family: 'Arial', sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            color: #3498db;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+	<div class="logo">Learn<span style="color: #e74c3c;">Sphere</span></div>
+<br>
+    <div class="container">
+      <div class="col-md-4 text-end mt-3">
+				 <a href="/trainerHome" class="btn btn-primary position-absolute top-0 end-0 m-3">Go to Home</a> 
+</div>
+    <form action="/addLesson" method="post" class="mx-auto"> <!-- Center the form horizontally -->
+        <div class="mb-3">
+            <label for="course" class="form-label">Course ID:</label>
+            <input type="text" class="form-control" id="course" name="course">
+        </div>
+        <div class="mb-3">
+            <label for="lessonId" class="form-label">Lesson ID:</label>
+            <input type="text" class="form-control" id="lessonId" name="lessonId">
+        </div>
+        <div class="mb-3">
+            <label for="lessonName" class="form-label">Lesson Name:</label>
+            <input type="text" class="form-control" id="lessonName" name="lessonName">
+        </div>
+        <div class="mb-3">
+            <label for="lessonTopics" class="form-label">Lesson Topics:</label>
+            <input type="text" class="form-control" id="lessonTopics" name="lessonTopics">
+        </div>
+        <div class="mb-3">
+            <label for="lessonLink" class="form-label">Lesson Link:</label>
+            <input type="text" class="form-control" id="lessonLink" name="lessonLink">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+</div>
+</body>
+</html>
